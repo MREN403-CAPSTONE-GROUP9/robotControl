@@ -1,0 +1,8 @@
+.venv/
+.direnv/
+
+build/
+install/
+log/
+__pycache__/
+*.py[cod]
