@@ -1,5 +1,6 @@
 .venv/
 .direnv/
+.ros2-install-path
 
 build/
 install/
