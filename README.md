@@ -19,9 +19,9 @@ venv support, and any additional ROS packages or Python dependencies listed
 in `requirements.txt`. It configures Bash directory-based activation for
 this project. Open a new terminal after setup.
 
-## Daily use
+## Activation after first use
 
-With `direnv` enabled, entering this repository in Bash automatically
+With `direnv` enabled, entering this repository in Bash should automatically
 activates ROS and the project Python venv. To activate manually:
 
 ```bash
@@ -60,12 +60,13 @@ prebuilt binaries, but required to compile C++ packages. ROS apt package entries
 in `requirements.txt` apply only to Ubuntu; Python requirements are installed
 into the ROS Pixi environment on Windows.
 
-Build packages from the workspace root with:
+Build packages from the workspace root if needed with:
 
 ```bash
 colcon build
 source install/setup.bash
 ```
+*** TODO: figure out why colcon is not working
 
 On Windows, after activating with `. .\activate.ps1`, build in PowerShell with:
 
@@ -99,3 +100,16 @@ such as RViz when available in the WSL installation.
 - `activate.ps1` — manual Windows ROS and Pixi environment activation
 - `.envrc` — automatic activation when entering this directory with direnv
 - `requirements.txt` — additional ROS apt packages and Python dependencies
+
+
+
+** Working tools
+
+in a shell or terminal that has had the activation script run
+
+```
+rqt
+```
+gives a bunch of tools to view, track, and test ros topics. Python and plot libraries are included in ros install and/or added to requirements.txt so that features work. If a feature does not load look at shell it was launched from for missing package error codes and add them to requirements.txt the install with `pip install -r requirements.txt`
+
+so far runs best on native windows. 
