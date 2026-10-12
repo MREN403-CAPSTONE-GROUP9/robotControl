@@ -1,5 +1,6 @@
 # ROS apt packages (installed by setup.sh):
 # ros: ros-lyrical-demo-nodes-cpp
+ros-lyrical-rqt
 
 # Additional Python packages are installed into .venv with pip.
 MatPlotLib
