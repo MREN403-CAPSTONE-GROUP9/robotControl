@@ -12,6 +12,7 @@ if (-not (Test-Path -LiteralPath $InstallPathFile -PathType Leaf)) {
 }
 
 $RosRoot = (Get-Content -LiteralPath $InstallPathFile -Raw).Trim()
+Write-Host "ROS 2 installation path: $RosRoot"
 $RosSetup = Join-Path $RosRoot 'local_setup.bat'
 if (-not (Test-Path -LiteralPath $RosSetup -PathType Leaf)) {
     throw "ROS setup file not found: $RosSetup. Rerun setup.ps1."
@@ -43,10 +44,8 @@ try {
 
 $Command = "call `"$RosSetup`" >nul && set"
 $ProcessInfo = [Diagnostics.ProcessStartInfo]::new($env:ComSpec)
-$ProcessInfo.ArgumentList.Add('/u')
-$ProcessInfo.ArgumentList.Add('/d')
-$ProcessInfo.ArgumentList.Add('/c')
-$ProcessInfo.ArgumentList.Add($Command)
+# cmd.exe parses /c arguments differently from the Windows argument-list rules.
+$ProcessInfo.Arguments = '/u /d /s /c "' + $Command + '"'
 $ProcessInfo.UseShellExecute = $false
 $ProcessInfo.RedirectStandardOutput = $true
 $ProcessInfo.RedirectStandardError = $true
