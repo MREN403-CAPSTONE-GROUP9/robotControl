@@ -12,4 +12,7 @@ ros2 topic echo /msg
 
 both must be on the same LAN 
 
+if controller is WSL try running in mirror mode 
+https://learn.microsoft.com/en-us/windows/wsl/wsl-config#configuration-settings-for-wslconfig
+
 > derived from https://husarion.com/tutorials/ros2-tutorials/6-robot-network/
