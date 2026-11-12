@@ -118,3 +118,7 @@ so far runs best on native windows.
 - [Main Project Portfolio](https://github.com/MREN403-CAPSTONE-GROUP9)
 - [Project Management Board](https://github.com/orgs/MREN403-CAPSTONE-GROUP9/projects/1)
 - [Robot Environment](https://github.com/MREN403-CAPSTONE-GROUP9/robotEnv)
+
+---
+
+**MREN 403 Capstone | Queen's University | 2026–2027**
