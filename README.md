@@ -113,3 +113,8 @@ rqt
 gives a bunch of tools to view, track, and test ros topics. Python and plot libraries are included in ros install and/or added to requirements.txt so that features work. If a feature does not load look at shell it was launched from for missing package error codes and add them to requirements.txt the install with `pip install -r requirements.txt`
 
 so far runs best on native windows. 
+
+## Related Repositories
+- [Main Project Portfolio](https://github.com/MREN403-CAPSTONE-GROUP9)
+- [Project Management Board](https://github.com/orgs/MREN403-CAPSTONE-GROUP9/projects/1)
+- [Robot Environment](https://github.com/MREN403-CAPSTONE-GROUP9/robotEnv)
